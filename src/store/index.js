@@ -4,9 +4,8 @@
  * to all of the reducers that were registerd with createStore()
  */
 
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { createStore } from "redux";
 
 import lotteryReducer from "../reducers/lottery";
 
-export default createStore(lotteryReducer, applyMiddleware(thunk));
+export default createStore(lotteryReducer);

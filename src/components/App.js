@@ -28,7 +28,8 @@ class App extends React.Component {
 
 App.defaultProps = {
   tickets: [],
-  balance: 0
+  balance: 0,
+  onButtonClick: () => {}
 };
 
 
