@@ -1,8 +1,15 @@
-import { actions } from "../actions/lottery";
+import {actions} from "../actions/lottery";
 
+const lotteryReducer = function (state = {tickets: []}, action) {
+    switch (action.type) {
+        case actions.play:
+            return {
+                tickets: [...state.tickets, action.payload]
+            };
 
-const lotteryReducer = function(state = { tickets: []}, action) {
-  return state;
-}
+        default:
+            return state;
+    }
+};
 
 export default lotteryReducer
